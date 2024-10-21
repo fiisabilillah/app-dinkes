@@ -25,8 +25,11 @@ class SuperController extends Controller
             'alert-type' => 'info'
         );
 
-        return redirect('/login')->with($notification);
+        return redirect('/super/login')->with($notification);
     }
 
-
+    public function SuperLogin()
+    {
+        return view('super.super_login');
+    }
 }
