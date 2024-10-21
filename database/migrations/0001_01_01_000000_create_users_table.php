@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('photo');
-            $table->string('phone');
-            $table->string('address');
-            $table->enum('role',['superadmin','admin','user'])->default('user');
-            $table->enum('status',['1','0'])->default('1');
+            $table->string('photo')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
+            $table->enum('role', ['super', 'admin', 'user'])->default('user');
+            $table->enum('status', ['1', '0'])->default('1');
             $table->rememberToken();
             $table->timestamps();
         });
