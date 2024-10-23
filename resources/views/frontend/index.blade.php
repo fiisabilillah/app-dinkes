@@ -63,7 +63,7 @@
                                     <i class="flaticon-email"></i>
                                 </div>
                                 <div class="info">
-                                    <span>Email</span> Info@gmail.com
+                                    <span>Email</span> dinkesprovinsi@gmail.com
                                 </div>
                             </li>
                             <li>
@@ -71,7 +71,7 @@
                                     <i class="flaticon-call-center"></i>
                                 </div>
                                 <div class="info">
-                                    <span>Phone</span> +123 456 7890
+                                    <span>Telepone</span> +123 456 7890
                                 </div>
                             </li>
                             <li>
@@ -79,7 +79,7 @@
                                     <i class="flaticon-countdown"></i>
                                 </div>
                                 <div class="info">
-                                    <span>Office Hours</span> Sat - Wed : 8:00 - 4:00
+                                    <span>Jam Kerja</span> Sat - Wed : 8:00 - 4:00
                                 </div>
                             </li>
                         </ul>
@@ -110,16 +110,17 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner text-light carousel-zoom">
                 <div class="item active">
-                    <div class="slider-thumb bg-cover" style="background-image: url({{ asset('frontend/')}}assets/img/2440x1578.png);"></div>
+                <div class="slider-thumb bg-cover" style="background-image: url('{{ asset('frontend/assets/img/foto-sdmk.jpeg') }}');"></div>
+
                     <div class="box-table shadow dark">
                         <div class="box-cell">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-1">
                                         <div class="content">
-                                            <h2 data-animation="animated slideInDown">Make a unique planning for <strong> your business</strong></h2>
+                                            <h2 data-animation="animated slideInDown">Portal SDMK<strong> pemerintah provinsi jambi</strong></h2>
                                             <p data-animation="animated slideInLeft">
-                                                Arrived Size now easy eat hand how. Unwilling he departure elsewhere dejection at. Heart large seems may purse means few blind.
+                                            Selamat Datang di Portal Resmi SDMK Provinsi Jambi. Verifikasi Data Dalam Penyusunan Renbut SDMK Tingkat Provinsi!
                                             </p>
                                             <a data-animation="animated slideInUp" class="btn circle btn-light border btn-md" href="#">Our Services</a>
                                         </div>
@@ -129,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item">
+                <!-- <div class="item">
                     <div class="slider-thumb bg-cover" style="background-image: url({{ asset('frontend/')}}assets/img/2440x1578.png);"></div>
                     <div class="box-table shadow dark">
                         <div class="box-cell">
@@ -137,7 +138,7 @@
                                 <div class="row">
                                     <div class="col-md-10 col-md-offset-1">
                                         <div class="content">
-                                            <h2 data-animation="animated slideInLeft">We will help you To grow <strong>up your business</strong></h2>
+                                            <h2 data-animation="animated slideInLeft">Selamat Datang di SDMK <strong>Pemerintah Provinsi Jambi</strong></h2>
                                             <p data-animation="animated slideInLeft">
                                                 Arrived Size now easy eat hand how. Unwilling he departure elsewhere dejection at. Heart large seems may purse means few blind.
                                             </p>
@@ -168,7 +169,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- End Wrapper for slides -->
 
