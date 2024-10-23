@@ -27,23 +27,25 @@ class SuperController extends Controller
             'alert-type' => 'info'
         );
 
-        return redirect('/super/login')->with($notification);
+        return redirect('/login')->with($notification);
     }
 
     public function SuperLogin()
     {
-        return view('super.super_login');
+        return view('admin.admin_login');
     }
 
-    public function SuperProfile(){
+    public function SuperProfile()
+    {
 
         $id = Auth::user()->id;
         $profileData = User::find($id);
-        return view('super.super_profile_view',compact('profileData'));
-    }// End Method
+        return view('super.super_profile_view', compact('profileData'));
+    } // End Method
 
 
-    public function SuperProfileStore(Request $request){
+    public function SuperProfileStore(Request $request)
+    {
 
         $id = Auth::user()->id;
         $data = User::find($id);
@@ -54,11 +56,11 @@ class SuperController extends Controller
         $data->address = $request->address;
 
         if ($request->file('photo')) {
-           $file = $request->file('photo');
-           @unlink(public_path('upload/super_images/'.$data->photo));
-           $filename = date('YmdHi').$file->getClientOriginalName();
-           $file->move(public_path('upload/super_images'),$filename);
-           $data['photo'] = $filename;
+            $file = $request->file('photo');
+            @unlink(public_path('upload/super_images/' . $data->photo));
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('upload/super_images'), $filename);
+            $data['photo'] = $filename;
         }
 
         $data->save();
@@ -68,19 +70,19 @@ class SuperController extends Controller
             'alert-type' => 'success'
         );
         return redirect()->back()->with($notification);
+    } // End Method
 
-    }// End Method
-
-    public function SuperChangePassword(){
+    public function SuperChangePassword()
+    {
 
         $id = Auth::user()->id;
         $profileData = User::find($id);
-        return view('super.super_change_password',compact('profileData'));
+        return view('super.super_change_password', compact('profileData'));
+    } // End Method
 
-    }// End Method
 
-
-    public function SuperPasswordUpdate(Request $request){
+    public function SuperPasswordUpdate(Request $request)
+    {
 
         /// Validation
         $request->validate([
@@ -107,6 +109,5 @@ class SuperController extends Controller
             'alert-type' => 'success'
         );
         return back()->with($notification);
-
-    }// End Method
+    } // End Method
 }
