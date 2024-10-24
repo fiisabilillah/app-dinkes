@@ -54,6 +54,16 @@
                         <form method="POST" action="{{ route('user.profile.store') }}" enctype="multipart/form-data">
                             @csrf
 
+                            @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            @endif
+
 
                             <div class="card-body mb-3">
                                 <div class="d-flex align-items-center">
@@ -209,9 +219,43 @@
                                                     <h6 class="mb-0">Jenis Fungsional</h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
-                                                    <input type="text" name="jns_fungsional" class="form-control" value="{{ $profileData->jns_fungsional }}" />
+                                                    <select name="jns_fungsional" class="form-control">
+                                                        <option value="" disabled {{ empty($profileData->jns_fungsional) ? 'selected' : '' }}>Pilih Jenis Fungsional</option>
+                                                        <option value="Administrator Kesehatan" {{ $profileData->jns_fungsional == 'Administrator Kesehatan' ? 'selected' : '' }}>Administrator Kesehatan</option>
+                                                        <option value="Apoteker" {{ $profileData->jns_fungsional == 'Apoteker' ? 'selected' : '' }}>Apoteker</option>
+                                                        <option value="Keterampilan" {{ $profileData->jns_fungsional == 'Keterampilan' ? 'selected' : '' }}>Keterampilan</option>
+                                                        <option value="Bidan" {{ $profileData->jns_fungsional == 'Bidan' ? 'selected' : '' }}>Bidan</option>
+                                                        <option value="Dokter" {{ $profileData->jns_fungsional == 'Dokter' ? 'selected' : '' }}>Dokter</option>
+                                                        <option value="Dokter Gigi" {{ $profileData->jns_fungsional == 'Dokter Gigi' ? 'selected' : '' }}>Dokter Gigi</option>
+                                                        <option value="Dokter Pendidik Klinis" {{ $profileData->jns_fungsional == 'Dokter Pendidik Klinis' ? 'selected' : '' }}>Dokter Pendidik Klinis</option>
+                                                        <option value="Epidemiolog Kesehatan" {{ $profileData->jns_fungsional == 'Epidemiolog Kesehatan' ? 'selected' : '' }}>Epidemiolog Kesehatan</option>
+                                                        <option value="Entomolog Kesehatan" {{ $profileData->jns_fungsional == 'Entomolog Kesehatan' ? 'selected' : '' }}>Entomolog Kesehatan</option>
+                                                        <option value="Fisioterapis" {{ $profileData->jns_fungsional == 'Fisioterapis' ? 'selected' : '' }}>Fisioterapis</option>
+                                                        <option value="Fisikawan Medis" {{ $profileData->jns_fungsional == 'Fisikawan Medis' ? 'selected' : '' }}>Fisikawan Medis</option>
+                                                        <option value="Nutrisionis" {{ $profileData->jns_fungsional == 'Nutrisionis' ? 'selected' : '' }}>Nutrisionis</option>
+                                                        <option value="Okupasi Terapis" {{ $profileData->jns_fungsional == 'Okupasi Terapis' ? 'selected' : '' }}>Okupasi Terapis</option>
+                                                        <option value="Orthotis Prostetis" {{ $profileData->jns_fungsional == 'Orthotis Prostetis' ? 'selected' : '' }}>Orthotis Prostetis</option>
+                                                        <option value="Pembimbing Kesehatan Kerja" {{ $profileData->jns_fungsional == 'Pembimbing Kesehatan Kerja' ? 'selected' : '' }}>Pembimbing Kesehatan Kerja</option>
+                                                        <option value="Tenaga Promosi Kesehatan dan Ilmu Perilaku" {{ $profileData->jns_fungsional == 'Tenaga Promosi Kesehatan dan Ilmu Perilaku' ? 'selected' : '' }}>Tenaga Promosi Kesehatan dan Ilmu Perilaku (dahulu Penyuluh Kesehatan Masyarakat)</option>
+                                                        <option value="Perawat" {{ $profileData->jns_fungsional == 'Perawat' ? 'selected' : '' }}>Perawat</option>
+                                                        <option value="Terapis Gigi dan Mulut" {{ $profileData->jns_fungsional == 'Terapis Gigi dan Mulut' ? 'selected' : '' }}>Terapis Gigi dan Mulut (dahulu Perawat Gigi)</option>
+                                                        <option value="Perekam Medis" {{ $profileData->jns_fungsional == 'Perekam Medis' ? 'selected' : '' }}>Perekam Medis</option>
+                                                        <option value="Pranata Laboratorium Kesehatan" {{ $profileData->jns_fungsional == 'Pranata Laboratorium Kesehatan' ? 'selected' : '' }}>Pranata Laboratorium Kesehatan</option>
+                                                        <option value="Psikolog Klinis" {{ $profileData->jns_fungsional == 'Psikolog Klinis' ? 'selected' : '' }}>Psikolog Klinis</option>
+                                                        <option value="Radiografer" {{ $profileData->jns_fungsional == 'Radiografer' ? 'selected' : '' }}>Radiografer</option>
+                                                        <option value="Refraksionis Optisien" {{ $profileData->jns_fungsional == 'Refraksionis Optisien' ? 'selected' : '' }}>Refraksionis Optisien</option>
+                                                        <option value="Tenaga Sanitasi Lingkungan" {{ $profileData->jns_fungsional == 'Tenaga Sanitasi Lingkungan' ? 'selected' : '' }}>Tenaga Sanitasi Lingkungan (dahulu Sanitarian)</option>
+                                                        <option value="Teknisi Elektromedis" {{ $profileData->jns_fungsional == 'Teknisi Elektromedis' ? 'selected' : '' }}>Teknisi Elektromedis</option>
+                                                        <option value="Teknisi Gigi" {{ $profileData->jns_fungsional == 'Teknisi Gigi' ? 'selected' : '' }}>Teknisi Gigi</option>
+                                                        <option value="Teknisi Transfusi Darah" {{ $profileData->jns_fungsional == 'Teknisi Transfusi Darah' ? 'selected' : '' }}>Teknisi Transfusi Darah</option>
+                                                        <option value="Terapis Wicara" {{ $profileData->jns_fungsional == 'Terapis Wicara' ? 'selected' : '' }}>Terapis Wicara</option>
+                                                        <option value="Asisten Penata Anestesi" {{ $profileData->jns_fungsional == 'Asisten Penata Anestesi' ? 'selected' : '' }}>Asisten Penata Anestesi</option>
+                                                        <option value="Penata Anestesi" {{ $profileData->jns_fungsional == 'Penata Anestesi' ? 'selected' : '' }}>Penata Anestesi</option>
+                                                        <option value="Ortotis Prostetis" {{ $profileData->jns_fungsional == 'Ortotis Prostetis' ? 'selected' : '' }}>Ortotis Prostetis</option>
+                                                    </select>
                                                 </div>
                                             </div>
+
                                             <div class="row mb-3">
                                                 <div class="col-sm-3">
                                                     <h6 class="mb-0">Jenis Pengangkatan Jabfung</h6>

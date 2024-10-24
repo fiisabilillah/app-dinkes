@@ -58,7 +58,7 @@
                                             @csrf
                                             <div class="col-12">
                                                 <label for="nip" class="form-label">NIP</label>
-                                                <input type="text" id="nip" class="form-control" name="nip"
+                                                <input type="number" id="nip" class="form-control" name="nip"
                                                     :value="old('nip')" required autocomplete="nip" />
                                                 <x-input-error :messages="$errors->get('nip')" />
                                             </div>
