@@ -10,10 +10,10 @@
     <meta name="description" content="Buscom - Multipurpose Business and Corporate Template">
 
     <!-- ========== Page Title ========== -->
-    <title>Buscom - Multipurpose Business and Corporate Template</title>
+    <title>Portal SDMK</title>
 
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="{{ asset('frontend/assets/img/favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('frontend/assets/img/logo-fav.png')}}" type="image/x-icon">
 
     <!-- ========== Start Stylesheet ========== -->
     <link href="{{ asset('frontend/assets/css/bootstrap.min.css')}}" rel="stylesheet" />

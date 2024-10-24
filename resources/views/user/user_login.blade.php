@@ -38,7 +38,7 @@
 
                         <div class="card shadow-none bg-transparent shadow-none rounded-0 mb-0">
                             <div class="card-body">
-                                <img src="{{ asset('backend/assets/images/login-images/login-cover.svg') }}" class="img-fluid auth-img-cover-login" width="650" alt="" />
+                                <img src="{{ asset('backend/assets/images/login-images/12.svg') }}" class="img-fluid auth-img-cover-login" width="650" alt="" />
                             </div>
                         </div>
 
@@ -87,7 +87,7 @@
                                             </div>
                                             <div class="col-12">
                                                 <div class="d-grid">
-                                                    <button type="submit" class="btn btn-primary">Sign in</button>
+                                                    <button type="submit" class="btn btn-success">Sign in</button>
                                                 </div>
                                             </div>
                                             <div class="col-12">

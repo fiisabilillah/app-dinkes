@@ -32,12 +32,10 @@
             <div class="">
                 <div class="row g-0">
 
-                    <div
-                        class="col-12 col-xl-7 col-xxl-8 auth-cover-left align-items-center justify-content-center d-none d-xl-flex">
+                    <div class="col-12 col-xl-7 col-xxl-8 auth-cover-left align-items-center justify-content-center d-none d-xl-flex">
                         <div class="card shadow-none bg-transparent shadow-none rounded-0 mb-0">
                             <div class="card-body">
-                                <img src="{{ asset('backend/assets/images/login-images/register-cover.svg') }}"
-                                    class="img-fluid auth-img-cover-login" width="550" alt="" />
+                                <img src="{{ asset('backend/assets/images/login-images/register-cover.svg')}}" class="img-fluid auth-img-cover-login" width="550" alt="" />
                             </div>
                         </div>
                     </div>
@@ -58,45 +56,36 @@
                                             @csrf
                                             <div class="col-12">
                                                 <label for="inputNIK" class="form-label">NIK</label>
-                                                <input type="text" name="nik" class="form-control" id="inputNIK"
-                                                    placeholder="" required>
+                                                <input type="text" name="nik" class="form-control" id="inputNIK" placeholder="" required>
                                             </div>
                                             <div class="col-12 mt-4">
                                                 <label for="nama" class="form-label">Name</label>
-                                                <input type="text" id="nama" class="form-control" name="nama"
-                                                    :value="old('nama')" required autofocus autocomplete="nama" />
+                                                <input type="text" id="nama" class="form-control" name="nama" :value="old('nama')" required autofocus autocomplete="nama" />
                                                 <x-input-error :messages="$errors->get('nama')" class="mt-2" />
                                             </div>
                                             <div class="col-12 mt-4">
                                                 <label for="inputEmailAddress" class="form-label">Email</label>
-                                                <input type="email" id="email" class="form-control" name="email"
-                                                    :value="old('email')" required autocomplete="username" />
+                                                <input type="email" id="email" class="form-control" name="email" :value="old('email')" required autocomplete="username" />
                                                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                             </div>
                                             <div class="input-box mt-4">
                                                 <label class="label-text">Sandi</label>
                                                 <div class="form-group">
-                                                    <input class="form-control form--control" id="password"
-                                                        type="password" name="password" required
-                                                        autocomplete="new-password" />
+                                                    <input class="form-control form--control" id="password" type="password" name="password" required autocomplete="new-password" />
                                                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                                 </div>
                                             </div>
                                             <div class="input-box mt-4">
                                                 <label class="label-text">Ulangi Sandi</label>
                                                 <div class="form-group">
-                                                    <input class="form-control form--control" id="password_confirmation"
-                                                        type="password" name="password_confirmation" required
-                                                        autocomplete="new-password" />
+                                                    <input class="form-control form--control" id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" />
                                                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                                                 </div>
                                             </div>
                                             <div class="col-12 mt-4">
                                                 <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="flexSwitchCheckChecked" required>
-                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Saya
-                                                        membaca dan menyetujui Syarat & Ketentuan</label>
+                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" required>
+                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Saya membaca dan menyetujui Syarat & Ketentuan</label>
                                                 </div>
                                             </div>
                                             <div class="col-12">
@@ -106,8 +95,7 @@
                                             </div>
                                             <div class="col-12">
                                                 <div class="text-center ">
-                                                    <p class="mb-0">Sudah punya akun? <a
-                                                            href="{{ route('login') }}">Masuk di sini</a></p>
+                                                    <p class="mb-0">Sudah punya akun? <a href="{{ route('login') }}">Masuk di sini</a></p>
                                                 </div>
                                             </div>
                                         </form>

@@ -11,12 +11,16 @@ class UserController extends Controller
 {
     public function UserDashboard()
     {
-        return view('frontend.dashboard.index');
+        return view('user.index');
     }
 
     public function UserLogin()
     {
         return view('frontend.login');
+    } // End Method
+    public function UserRegister()
+    {
+        return view('auth.register');
     } // End Method
 
     public function UserProfile()
@@ -24,7 +28,7 @@ class UserController extends Controller
 
         $id = Auth::user()->id;
         $profileData = User::find($id);
-        return view('frontend.dashboard.user_profile_view', compact('profileData'));
+        return view('user.user_profile_view', compact('profileData'));
     } // End Method
 
     public function UserProfileStore(Request $request)
@@ -32,11 +36,17 @@ class UserController extends Controller
 
         $id = Auth::user()->id;
         $data = User::find($id);
-        $data->name = $request->name;
-        $data->username = $request->username;
         $data->email = $request->email;
+        $data->username = $request->username;
+        $data->nama = $request->nama;
+        $data->nik = $request->nik;
+        $data->nip = $request->nip;
+        $data->tempat = $request->tempat;
+        $data->tgl_lahir = $request->tgl_lahir;
+        $data->jk = $request->jk;
+        $data->kabupaten = $request->kabupaten;
         $data->phone = $request->phone;
-        $data->address = $request->address;
+        $data->alamat = $request->alamat;
 
         if ($request->file('photo')) {
             $file = $request->file('photo');
@@ -75,7 +85,7 @@ class UserController extends Controller
     {
         $id = Auth::user()->id;
         $profileData = User::find($id);
-        return view('frontend.dashboard.user_change_password', compact('profileData'));
+        return view('user.user_change_password', compact('profileData'));
     } // End Method
 
     public function UserPasswordUpdate(Request $request)

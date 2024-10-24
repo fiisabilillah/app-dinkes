@@ -17,30 +17,28 @@ class UserTableSeeder extends Seeder
     {
         FacadesDB::table('users')->insert([
             [
-                'name' => 'Super Admin',
-                'username' => 'superadmin',
                 'email' => 'officialteam548@gmail.com',
+                'nama' => 'Super Admin',
                 'password' => Hash::make('123'),
                 'role' => 'super',
-                'status' => '1',
+                'status' => 1,
+                'username' => 'superadmin',
             ],
-
             [
-                'name' => 'Admin',
-                'username' => 'admin',
                 'email' => 'rgamejambi@gmail.com',
+                'nama' => 'Admin',
                 'password' => Hash::make('123'),
                 'role' => 'admin',
-                'status' => '1',
+                'status' => 1,
+                'username' => 'admin',
             ],
-
             [
-                'name' => 'User',
-                'username' => 'user',
                 'email' => 'user@gmail.com',
+                'nama' => 'User',
                 'password' => Hash::make('123'),
                 'role' => 'user',
-                'status' => '1',
+                'status' => 1,
+                'username' => 'user',// Tambahkan nilai NIK
             ],
         ]);
     }

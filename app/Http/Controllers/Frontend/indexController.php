@@ -9,6 +9,6 @@ class indexController extends Controller
 {
     public function Index()
     {
-        return view('frontend.index');
+        return view('frontend.login');
     } // End Method
 }

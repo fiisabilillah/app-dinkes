@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Frontend\indexController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SuperController;
@@ -14,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [indexController::class, 'Index'])->name('index');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('user/dashboard', function () {
+//     return view('user/dashboard');
+// })->middleware(['auth', 'verified'])->name('user.dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -42,7 +43,6 @@ Route::get('/super/login', [SuperController::class, 'SuperLogin'])->name('super.
 Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login')->middleware(RedirectIfAuthenticated::class);
 Route::get('/login', [UserController::class, 'UserLogin'])->name('login')->middleware(RedirectIfAuthenticated::class);
 
-
 ///// Admin Group Middleware
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
@@ -57,7 +57,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
 ///// Users Group Middleware
 Route::middleware(['auth', 'role:user'])->group(function () {
-    Route::get('/user/dashboard', [UserController::class, 'UserDashboard'])->name('frontend.dashboard');
+    Route::get('/user/dashboard', [UserController::class, 'UserDashboard'])->middleware(['auth', 'verified'])->name('user.dashboard');
 
     Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
     Route::get('/user/profile', [UserController::class, 'UserProfile'])->name('user.profile');
