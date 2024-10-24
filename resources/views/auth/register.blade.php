@@ -57,8 +57,8 @@
                                         <form method="POST" action="{{ route('register') }}">
                                             @csrf
                                             <div class="col-12">
-                                                <label for="inputNIK" class="form-label">NIK</label>
-                                                <input type="number" name="nik" class="form-control" id="inputNIK"
+                                                <label for="inputNIP" class="form-label">NIP</label>
+                                                <input type="number" name="nip" class="form-control" id="inputNIP"
                                                     placeholder="" required>
                                             </div>
                                             <div class="col-12 mt-4">
