@@ -49,6 +49,7 @@ class UserController extends Controller
         $data->alamat = $request->alamat;
         $data->jns_fungsional = $request->jns_fungsional;
         $data->jns_pengangkatan_jabfung = $request->jns_pengangkatan_jabfung;
+        $data->jenjang_jabfung = $request->jenjang_jabfung;
         $data->angka_kredit_terakhir = $request->angka_kredit_terakhir;
 
         if ($request->file('photo')) {

@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('alamat')->nullable();
             $table->string('jns_fungsional')->nullable();
             $table->string('jns_pengangkatan_jabfung')->nullable();
+            $table->string('jenjang_jabfung')->nullable();
             $table->string('angka_kredit_terakhir')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

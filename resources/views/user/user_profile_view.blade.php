@@ -222,6 +222,14 @@
                                             </div>
                                             <div class="row mb-3">
                                                 <div class="col-sm-3">
+                                                    <h6 class="mb-0">Jenjang Jabfung</h6>
+                                                </div>
+                                                <div class="col-sm-9 text-secondary">
+                                                    <input type="text" name="jenjang_jabfung" class="form-control" value="{{ $profileData->jenjang_jabfung }}" />
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-sm-3">
                                                     <h6 class="mb-0">Angka Kredit Terakhir</h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
