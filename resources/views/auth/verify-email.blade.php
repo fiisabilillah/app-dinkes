@@ -78,7 +78,7 @@
             @csrf
             <button type="submit" class="btn">{{ __('Mengirim ulang email verifikasi') }}</button>
         </form>
-
+        <br>
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button type="submit" class="btn logout-btn">{{ __('Log Out') }}</button>
