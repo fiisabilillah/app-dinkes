@@ -58,7 +58,7 @@
                                             @csrf
                                             <div class="col-12">
                                                 <label for="inputNIK" class="form-label">NIK</label>
-                                                <input type="text" name="nik" class="form-control" id="inputNIK"
+                                                <input type="number" name="nik" class="form-control" id="inputNIK"
                                                     placeholder="" required>
                                             </div>
                                             <div class="col-12 mt-4">
