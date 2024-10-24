@@ -99,6 +99,12 @@ class UserController extends Controller
             $generalWarning = 'Harap isi data yang kosong atau masukkan strip (-) jika tidak memiliki data tersebut.';
         }
 
+        // Validasi ukuran foto sebelum diproses (maksimum 2 MB)
+        if ($request->file('photo') && $request->file('photo')->getSize() > 2097152) {
+            $messages['photo'] = 'Ukuran foto maksimal adalah 2MB.';
+            return redirect()->back()->withErrors($messages)->withInput();
+        }
+
         // Simpan data yang diisi, walaupun ada beberapa yang belum lengkap
         $id = Auth::user()->id;
         $data = User::find($id);
@@ -145,6 +151,7 @@ class UserController extends Controller
 
         return redirect()->back()->with($notification);
     }
+
 
 
 
