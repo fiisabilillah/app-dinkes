@@ -359,14 +359,14 @@
                 <ul class="dropdown-menu dropdown-menu-end">
 
                     <li><a class="dropdown-item d-flex align-items-center"
-                            href="{{ route('user.change.password') }}"><i class="bx bx-cog fs-5"></i><span>Change
-                                Password </span></a> </li>
+                            href="{{ route('user.change.password') }}"><i class="bx bx-cog fs-5"></i><span>Ganti
+                                Sandi </span></a> </li>
 
                     <li>
                         <div class="dropdown-divider mb-0"></div>
                     </li>
                     <li><a class="dropdown-item d-flex align-items-center" href="{{ route('user.logout') }}"><i
-                                class="bx bx-log-out-circle"></i><span>Logout</span></a>
+                                class="bx bx-log-out-circle"></i><span>Keluar</span></a>
                     </li>
                 </ul>
             </div>
