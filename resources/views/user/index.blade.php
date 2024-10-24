@@ -8,7 +8,7 @@
                     <div class="d-flex align-items-center">
                         <div class="me-auto" style="padding: 10px;">
                             <p class="mb-0 text-white" style="font-size: 28px; text-transform: uppercase; padding-bottom: 10px;">Selamat datang di SDMK Provinsi Jambi</p>
-                            <p class="mb-0 font-13 text-white" style="font-size: 16px;padding-bottom: 10px;">Media profil tenaga kesehatan di Indonesia yang terpusat untuk efisiensi pengelolaan data SDM kesehatan.</p>
+                            <p class="mb-0 font-13 text-white" style="font-size: 16px;padding-bottom: 10px;">Media profil tenaga kesehatan di Provinsi Jambi yang terpusat untuk efisiensi pengelolaan data SDM kesehatan.</p>
                         </div>
                         <div id="chart1"></div>
                     </div>
