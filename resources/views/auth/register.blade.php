@@ -36,7 +36,7 @@
                         class="col-12 col-xl-7 col-xxl-8 auth-cover-left align-items-center justify-content-center d-none d-xl-flex">
                         <div class="card shadow-none bg-transparent shadow-none rounded-0 mb-0">
                             <div class="card-body">
-                                <img src="{{ asset('backend/assets/images/login-images/register-cover.svg') }}"
+                                <img src="{{ asset('backend/assets/images/login-images/login-cover.svg') }}"
                                     class="img-fluid auth-img-cover-login" width="550" alt="" />
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                                             </div>
                                             <div class="col-12">
                                                 <div class="d-grid">
-                                                    <button type="submit" class="btn btn-primary">Mendaftar</button>
+                                                    <button type="submit" class="btn btn-info">Mendaftar</button>
                                                 </div>
                                             </div>
                                             <div class="col-12">
