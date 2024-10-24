@@ -105,7 +105,7 @@
                                             </div>
                                             <div class="row mb-3">
                                                 <div class="col-sm-3">
-                                                    <h6 class="mb-0">Tempat</h6>
+                                                    <h6 class="mb-0">Tempat lahir</h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
                                                     <input type="text" name="tempat" class="form-control" value="{{ $profileData->tempat }}" />
@@ -160,7 +160,7 @@
                                                     <h6 class="mb-0">Email</h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
-                                                    <input type="email" name="email" class="form-control" value="{{ $profileData->email }}" readonly/>
+                                                    <input type="email" name="email" class="form-control" value="{{ $profileData->email }}" readonly />
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
