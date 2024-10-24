@@ -47,7 +47,7 @@
                             <div class="card-body p-sm-5">
                                 <div class="">
                                     <div class="mb-3 text-center">
-                                        <img src="assets/images/logo-icon.png" width="60" alt="" />
+                                        <img src="{{ asset('backend/assets/images/logo-jambi.png') }}" width="60" alt="" />
                                     </div>
                                     <div class="text-center mb-4">
                                         <h5 class="">Register</h5>
