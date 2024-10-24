@@ -6,7 +6,7 @@
            <div>
                <h4 class="logo-text" style="color: darkgreen;">SDMK</h4>
            </div>
-           <div class="toggle-icon ms-auto" style="color: black;"><i class='bx bx-arrow-back'></i>
+           <div class="toggle-icon ms-auto" style="color: black;"><i class='bx bx-menu'></i>
            </div>
        </div>
        <!--navigation-->
