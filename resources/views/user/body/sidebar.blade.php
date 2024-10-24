@@ -4,7 +4,7 @@
                <img src="{{ asset('backend/assets/images/logo-jambi.png') }}" class="logo-icon" alt="logo icon">
            </div>
            <div>
-               <h4 class="logo-text">SDMK</h4>
+               <h4 class="logo-text" style="color: darkgreen;">SDMK</h4>
            </div>
            <div class="toggle-icon ms-auto" style="color: black;"><i class='bx bx-arrow-back'></i>
            </div>
