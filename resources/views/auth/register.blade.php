@@ -54,7 +54,7 @@
                                         <p class="mb-0">Silakan isi detail di bawah ini untuk membuat akun Anda</p>
                                     </div>
                                     <div class="form-body">
-                                        <form method="POST" action="{{ route('register') }}">
+                                        <form class="row g-3" method="POST" action="{{ route('register') }}">
                                             @csrf
                                             <div class="col-12">
                                                 <label for="nip" class="form-label">NIP</label>
