@@ -62,11 +62,11 @@
                                         <a class="nav-link active" id="data-diri-tab" data-bs-toggle="tab" href="#data-diri" role="tab" aria-controls="data-diri" aria-selected="true">Data Diri</a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" id="profesi-tab" data-bs-toggle="tab" href="#profesi" role="tab" aria-controls="profesi" aria-selected="false">Profesi</a>
+                                        <a class="nav-link" id="riwayatfungsional-tab" data-bs-toggle="tab" href="#riwayatfungsional" role="tab" aria-controls="riwayatfungsional" aria-selected="false">Riwayat Fungsional</a>
                                     </li>
-                                    <li class="nav-item" role="presentation">
+                                    <!-- <li class="nav-item" role="presentation">
                                         <a class="nav-link" id="pekerjaan-tab" data-bs-toggle="tab" href="#pekerjaan" role="tab" aria-controls="pekerjaan" aria-selected="false">Pekerjaan</a>
-                                    </li>
+                                    </li> -->
                                     <!-- Tambahkan tab lain sesuai kebutuhan -->
                                 </ul>
 
@@ -183,22 +183,38 @@
                                         </div>
                                     </div>
 
-                                    <!-- Konten Profesi -->
-                                    <div class="tab-pane fade" id="profesi" role="tabpanel" aria-labelledby="profesi-tab">
+                                    <!-- Konten riwayatfungsional -->
+                                    <div class="tab-pane fade" id="riwayatfungsional" role="tabpanel" aria-labelledby="riwayatfungsional-tab">
                                         <div class="card-body mb-3">
                                             <div class="row mb-3">
                                                 <div class="col-sm-3">
-                                                    <h6 class="mb-0">Profesi</h6>
+                                                    <h6 class="mb-0">Jenis Fungsional</h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
-                                                    <input type="text" name="profesi" class="form-control" value="{{ $profileData->profesi }}" />
+                                                    <input type="text" name="jns_fungsional" class="form-control" value="{{ $profileData->jns_fungsional }}" />
                                                 </div>
                                             </div>
-                                            <!-- Tambahkan field lain untuk informasi profesi -->
+                                            <div class="row mb-3">
+                                                <div class="col-sm-3">
+                                                    <h6 class="mb-0">Jenis Pengangkatan Jabfung</h6>
+                                                </div>
+                                                <div class="col-sm-9 text-secondary">
+                                                    <input type="text" name="jns_pengangkatan_jabfung" class="form-control" value="{{ $profileData->jns_pengangkatan_jabfung }}" />
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-sm-3">
+                                                    <h6 class="mb-0">Angka Kredit Terakhir</h6>
+                                                </div>
+                                                <div class="col-sm-9 text-secondary">
+                                                    <input type="text" name="angka_kredit_terakhir" class="form-control" value="{{ $profileData->angka_kredit_terakhir }}" />
+                                                </div>
+                                            </div>
+                                            <!-- Tambahkan field lain untuk informasi jns_fungsional -->
                                         </div>
                                     </div>
                                     <!-- Konten Pekerjaan -->
-                                    <div class="tab-pane fade" id="pekerjaan" role="tabpanel" aria-labelledby="pekerjaan-tab">
+                                    <!-- <div class="tab-pane fade" id="pekerjaan" role="tabpanel" aria-labelledby="pekerjaan-tab">
                                         <div class="card-body mb-3">
                                             <div class="row mb-3">
                                                 <div class="col-sm-3">
@@ -208,9 +224,9 @@
                                                     <input type="text" name="pekerjaan" class="form-control" value="{{ $profileData->pekerjaan }}" />
                                                 </div>
                                             </div>
-                                            <!-- Tambahkan field lain untuk informasi profesi -->
+                                            Tambahkan field lain untuk informasi riwayatfungsional
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="row">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9 text-secondary">
