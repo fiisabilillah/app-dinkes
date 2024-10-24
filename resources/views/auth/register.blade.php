@@ -57,38 +57,31 @@
                                         <form method="POST" action="{{ route('register') }}">
                                             @csrf
                                             <div class="col-12">
-                                                <label for="inputNIP" class="form-label">NIP</label>
-                                                <input type="number" name="nip" class="form-control" id="inputNIP"
-                                                    placeholder="" required autofocus>
+                                                <label for="nip" class="form-label">NIP</label>
+                                                <input type="text" id="nip" class="form-control" name="nip"
+                                                    :value="old('nip')" required autocomplete="nip" />
+                                                <x-input-error :messages="$errors->get('nip')" />
                                             </div>
-                                            <div class="col-12 mt-4">
-                                                <label for="nama" class="form-label">Name</label>
+                                            <div class="col-12">
+                                                <label for="nama" class="form-label">Nama</label>
                                                 <input type="text" id="nama" class="form-control" name="nama"
                                                     :value="old('nama')" required autocomplete="nama" />
-                                                <x-input-error :messages="$errors->get('nama')" class="mt-2" />
+                                                <x-input-error :messages="$errors->get('nama')" />
                                             </div>
-                                            <div class="col-12 mt-4">
-                                                <label for="inputEmailAddress" class="form-label">Email</label>
-                                                <input type="email" id="email" class="form-control" name="email"
-                                                    :value="old('email')" required autocomplete="username" />
-                                                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                                            <div class="col-12">
+                                                <label for="inputEmailAddress" class="form-label">Email Address</label>
+                                                <input type="email" name="email" class="form-control" id="inputEmailAddress" placeholder="example@user.com">
                                             </div>
-                                            <div class="input-box mt-4">
-                                                <label class="label-text">Sandi</label>
-                                                <div class="form-group">
-                                                    <input class="form-control form--control" id="password"
-                                                        type="password" name="password" required
-                                                        autocomplete="new-password" />
-                                                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                                            <div class="col-12">
+                                                <label for="inputChoosePassword1" class="form-label">Sandi</label>
+                                                <div class="input-group" id="show_hide_password1">
+                                                    <input type="password" name="password" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
                                                 </div>
                                             </div>
-                                            <div class="input-box mt-4">
-                                                <label class="label-text">Ulangi Sandi</label>
-                                                <div class="form-group">
-                                                    <input class="form-control form--control" id="password_confirmation"
-                                                        type="password" name="password_confirmation" required
-                                                        autocomplete="new-password" />
-                                                    <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+                                            <div class="col-12">
+                                                <label for="inputChoosePassword2" class="form-label">Ulangi Sandi</label>
+                                                <div class="input-group" id="show_hide_password2">
+                                                    <input type="password" name="password_confirmation" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
                                                 </div>
                                             </div>
                                             <div class="col-12 mt-4">
@@ -124,31 +117,47 @@
     </div>
     <!--end wrapper-->
     <!-- Bootstrap JS -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('backend/assets/js/bootstrap.bundle.min.js')}}"></script>
     <!--plugins-->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
-    <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
-    <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    <script src="{{ asset('backend/assets/js/jquery.min.js')}}"></script>
+    <script src="{{ asset('backend/assets/plugins/simplebar/js/simplebar.min.js')}}"></script>
+    <script src="{{ asset('backend/assets/plugins/metismenu/js/metisMenu.min.js')}}"></script>
+    <script src="{{ asset('backend/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js')}}"></script>
     <!--Password show & hide js -->
     <script>
         $(document).ready(function() {
-            $("#show_hide_password a").on('click', function(event) {
+            $("#show_hide_password1 a").on('click', function(event) {
                 event.preventDefault();
-                if ($('#show_hide_password input').attr("type") == "text") {
-                    $('#show_hide_password input').attr('type', 'password');
-                    $('#show_hide_password i').addClass("bx-hide");
-                    $('#show_hide_password i').removeClass("bx-show");
-                } else if ($('#show_hide_password input').attr("type") == "password") {
-                    $('#show_hide_password input').attr('type', 'text');
-                    $('#show_hide_password i').removeClass("bx-hide");
-                    $('#show_hide_password i').addClass("bx-show");
+                if ($('#show_hide_password1 input').attr("type") == "text") {
+                    $('#show_hide_password1 input').attr('type', 'password');
+                    $('#show_hide_password1 i').addClass("bx-hide");
+                    $('#show_hide_password1 i').removeClass("bx-show");
+                } else if ($('#show_hide_password1 input').attr("type") == "password") {
+                    $('#show_hide_password1 input').attr('type', 'text');
+                    $('#show_hide_password1 i').removeClass("bx-hide");
+                    $('#show_hide_password1 i').addClass("bx-show");
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#show_hide_password2 a").on('click', function(event) {
+                event.preventDefault();
+                if ($('#show_hide_password2 input').attr("type") == "text") {
+                    $('#show_hide_password2 input').attr('type', 'password');
+                    $('#show_hide_password2 i').addClass("bx-hide");
+                    $('#show_hide_password2 i').removeClass("bx-show");
+                } else if ($('#show_hide_password2 input').attr("type") == "password") {
+                    $('#show_hide_password2 input').attr('type', 'text');
+                    $('#show_hide_password2 i').removeClass("bx-hide");
+                    $('#show_hide_password2 i').addClass("bx-show");
                 }
             });
         });
     </script>
     <!--app JS-->
-    <script src="assets/js/app.js"></script>
+    <script src="{{ asset('backend/assets/js/app.js')}}"></script>
 </body>
 
 </html>
