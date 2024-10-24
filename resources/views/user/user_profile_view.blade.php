@@ -107,18 +107,18 @@
                                             </div>
                                             <div class="row mb-3">
                                                 <div class="col-sm-3">
-                                                    <h6 class="mb-0">NIK</h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                    <input type="number" name="nik" class="form-control" value="{{ $profileData->nik }}" />
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm-3">
                                                     <h6 class="mb-0">NIP</h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
                                                     <input type="number" name="nip" class="form-control" value="{{ $profileData->nip }}" />
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-sm-3">
+                                                    <h6 class="mb-0">NIK</h6>
+                                                </div>
+                                                <div class="col-sm-9 text-secondary">
+                                                    <input type="number" name="nik" class="form-control" value="{{ $profileData->nik }}" />
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
