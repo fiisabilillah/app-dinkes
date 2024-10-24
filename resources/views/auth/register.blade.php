@@ -59,12 +59,12 @@
                                             <div class="col-12">
                                                 <label for="inputNIP" class="form-label">NIP</label>
                                                 <input type="number" name="nip" class="form-control" id="inputNIP"
-                                                    placeholder="" required>
+                                                    placeholder="" required autofocus>
                                             </div>
                                             <div class="col-12 mt-4">
                                                 <label for="nama" class="form-label">Name</label>
                                                 <input type="text" id="nama" class="form-control" name="nama"
-                                                    :value="old('nama')" required autofocus autocomplete="nama" />
+                                                    :value="old('nama')" required autocomplete="nama" />
                                                 <x-input-error :messages="$errors->get('nama')" class="mt-2" />
                                             </div>
                                             <div class="col-12 mt-4">
