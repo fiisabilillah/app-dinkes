@@ -352,7 +352,7 @@
                 <a class="d-flex align-items-center nav-link dropdown-toggle gap-3 dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="{{ (!empty($profileData->photo)) ? url('upload/user_images/'.$profileData->photo) : url('upload/no_image.jpg')}}" class="user-img" alt="user avatar">
                     <div class="user-info">
-                        <p class="user-name mb-0">{{ $profileData->name }}</p>
+                        <p class="user-name mb-0">{{ $profileData->nama }}</p>
                         <p class="designattion mb-0">{{ $profileData->email }}</p>
                     </div>
                 </a>
