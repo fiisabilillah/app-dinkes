@@ -157,7 +157,7 @@
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
                                                     <select name="kabupaten" class="form-control">
-                                                        <option value="" disabled {{ empty($profileData->kabupaten) ? 'selected' : '' }}>Pilih Kabupaten</option>
+                                                        <option value="" disabled {{ empty($profileData->kabupaten) ? 'selected' : '' }}>Pilih Kota / Kabupaten</option>
                                                         <option value="Batanghari" {{ $profileData->kabupaten == 'Batanghari' ? 'selected' : '' }}>Batanghari</option>
                                                         <option value="Bungo" {{ $profileData->kabupaten == 'Bungo' ? 'selected' : '' }}>Bungo</option>
                                                         <option value="Jambi" {{ $profileData->kabupaten == 'Jambi' ? 'selected' : '' }}>Jambi</option>
