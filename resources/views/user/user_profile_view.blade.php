@@ -258,7 +258,7 @@
 
                                             <div class="row mb-3">
                                                 <div class="col-sm-3">
-                                                    <h6 class="mb-0">Jenis Pengangkatan Jabfung</h6>
+                                                    <h6 class="mb-0">Jenis Pengangkatan Jabatan Fungsional</h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
                                                     <input type="text" name="jns_pengangkatan_jabfung" class="form-control" value="{{ $profileData->jns_pengangkatan_jabfung }}" />
@@ -266,12 +266,29 @@
                                             </div>
                                             <div class="row mb-3">
                                                 <div class="col-sm-3">
-                                                    <h6 class="mb-0">Jenjang Jabfung</h6>
+                                                    <h6 class="mb-0">Jenjang Jabatan Fungsional</h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
-                                                    <input type="text" name="jenjang_jabfung" class="form-control" value="{{ $profileData->jenjang_jabfung }}" />
+                                                    <select name="jenjang_jabfung" class="form-control">
+                                                        <option value="" disabled {{ empty($profileData->jenjang_jabfung) ? 'selected' : '' }}>Pilih Jenjang Jabfung</option>
+
+                                                        <!-- Jenjang Jabatan Fungsional Keahlian -->
+                                                        <option value="" disabled>Jenjang Jabatan Fungsional Keahlian</option>
+                                                        <option value="Ahli Utama" {{ $profileData->jenjang_jabfung == 'Ahli Utama' ? 'selected' : '' }}>Ahli Utama</option>
+                                                        <option value="Ahli Madya" {{ $profileData->jenjang_jabfung == 'Ahli Madya' ? 'selected' : '' }}>Ahli Madya</option>
+                                                        <option value="Ahli Muda" {{ $profileData->jenjang_jabfung == 'Ahli Muda' ? 'selected' : '' }}>Ahli Muda</option>
+                                                        <option value="Ahli Pertama" {{ $profileData->jenjang_jabfung == 'Ahli Pertama' ? 'selected' : '' }}>Ahli Pertama</option>
+
+                                                        <!-- Jenjang Jabatan Fungsional Keterampilan -->
+                                                        <option value="" disabled>Jenjang Jabatan Fungsional Keterampilan</option>
+                                                        <option value="Penyelia" {{ $profileData->jenjang_jabfung == 'Penyelia' ? 'selected' : '' }}>Penyelia</option>
+                                                        <option value="Mahir" {{ $profileData->jenjang_jabfung == 'Mahir' ? 'selected' : '' }}>Mahir</option>
+                                                        <option value="Terampil" {{ $profileData->jenjang_jabfung == 'Terampil' ? 'selected' : '' }}>Terampil</option>
+                                                        <option value="Pemula" {{ $profileData->jenjang_jabfung == 'Pemula' ? 'selected' : '' }}>Pemula</option>
+                                                    </select>
                                                 </div>
                                             </div>
+
                                             <div class="row mb-3">
                                                 <div class="col-sm-3">
                                                     <h6 class="mb-0">Angka Kredit Terakhir</h6>
