@@ -38,7 +38,7 @@
 
                         <div class="card shadow-none bg-transparent shadow-none rounded-0 mb-0">
                             <div class="card-body">
-                                <img src="{{ asset('backend/assets/images/login-images/login-cover.svg') }}" class="img-fluid auth-img-cover-login" width="650" alt="" />
+                                <img src="{{ asset('backend/assets/images/login-images/login-sifunkes.svg') }}" class="img-fluid auth-img-cover-login" width="650" alt="" />
                             </div>
                         </div>
 
@@ -48,8 +48,9 @@
                         <div class="card rounded-0 m-3 shadow-none bg-transparent mb-0">
                             <div class="card-body p-sm-5">
                                 <div class="">
+                                    <h1 style="text-align: center;">Sistem Infromasi Jabatan Fungsional</h1>
                                     <div class="mb-3 text-center">
-                                        <img src="{{ asset('backend/assets/images/logo-jambi.png') }}" width="60" alt="">
+                                        <img src="{{ asset('backend/assets/images/logo-sifunkes.png') }}" width="60" alt="">
                                     </div>
                                     <div class="text-center mb-4">
                                         <h5 class="">Masuk </h5>
