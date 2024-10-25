@@ -64,7 +64,7 @@
 
                                             <div class="col-12">
                                                 <label for="inputEmailAddress" class="form-label">Email</label>
-                                                <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" id="inputEmailAddress" placeholder="jhon@example.com">
+                                                <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" id="inputEmailAddress" placeholder="example@gmail.com">
                                                 @error('email')
                                                 <span class="text-danger">{{ $message }}</span>
                                                 @enderror
@@ -90,7 +90,7 @@
 
                                             <div class="col-12">
                                                 <div class="d-grid">
-                                                    <button type="submit" class="btn btn-info">Sign in</button>
+                                                    <button type="submit" class="btn btn-secondary">Sign in</button>
                                                 </div>
                                             </div>
                                             <div class="col-12">

@@ -71,7 +71,7 @@
                                             </div>
                                             <div class="col-12">
                                                 <label for="inputEmailAddress" class="form-label">Email Address</label>
-                                                <input type="email" name="email" class="form-control" id="inputEmailAddress" placeholder="example@user.com">
+                                                <input type="email" name="email" class="form-control" id="inputEmailAddress" placeholder="example@gmail.com">
                                             </div>
                                             <div class="col-12">
                                                 <label for="inputChoosePassword1" class="form-label">Sandi</label>
@@ -82,7 +82,7 @@
                                             <div class="col-12">
                                                 <label for="inputChoosePassword2" class="form-label">Ulangi Sandi</label>
                                                 <div class="input-group" id="show_hide_password2">
-                                                    <input type="password" name="password_confirmation" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+                                                    <input type="password" name="password_confirmation" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Repeat Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
                                                 </div>
                                             </div>
                                             <div class="col-12 mt-4">
@@ -95,7 +95,7 @@
                                             </div>
                                             <div class="col-12">
                                                 <div class="d-grid">
-                                                    <button type="submit" class="btn btn-info">Mendaftar</button>
+                                                    <button type="submit" class="btn btn-secondary">Mendaftar</button>
                                                 </div>
                                             </div>
                                             <div class="col-12">
