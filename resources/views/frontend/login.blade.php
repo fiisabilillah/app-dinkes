@@ -90,7 +90,7 @@
 
                                             <div class="col-12">
                                                 <div class="d-grid">
-                                                    <button type="submit" class="btn btn-secondary">Sign in</button>
+                                                    <button type="submit" class="btn btn-secondary">Masuk</button>
                                                 </div>
                                             </div>
                                             <div class="col-12">
