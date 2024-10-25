@@ -35,7 +35,7 @@
                     <div
                         class="col-12 col-xl-7 col-xxl-8 auth-cover-left align-items-center justify-content-center d-none d-xl-flex">
                         <div class="card shadow-none bg-transparent shadow-none rounded-0 mb-0">
-                            <div class="card-body" style="margin-top: -180px;">
+                            <div class="card-body" style="margin-top: -220px;">
                                 <img src="{{ asset('backend/assets/images/login-images/login-sifunkes.svg') }}"
                                     class="img-fluid auth-img-cover-login" width="650" alt="" />
                             </div>
@@ -46,7 +46,7 @@
                         <div class="card rounded-0 m-3 shadow-none bg-transparent mb-0">
                             <div class="card-body p-sm-5">
                                 <div class="">
-                                    <h1 style="text-align: center;">Sistem Infromasi Jabatan Fungsional</h1>
+                                    <h1 style="text-align: center;">Sistem Informasi Jabatan Fungsional</h1>
                                     <div class="mb-3 text-center">
                                         <img src="{{ asset('backend/assets/images/logo-sifunkes.png') }}" width="60" alt="" />
                                     </div>
